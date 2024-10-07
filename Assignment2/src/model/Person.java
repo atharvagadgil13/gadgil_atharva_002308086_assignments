@@ -13,7 +13,7 @@ public class Person {
     private String lastName;
     private String socialSecurityNumber;
     private int age;
-    private String dateOfBirth;
+    private String dob;
     private float bodyWeight;
     private double annualIncome;
     private Address address;
@@ -77,12 +77,12 @@ public class Person {
                 return getFirstName();
             }
 
-    public String getDateOfBirth() {
-        return dateOfBirth;
+    public String getDob() {
+        return dob;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setDateOfBirth(String dob) {
+        this.dob = dob;
     }
     
     // Methods for setting home and office address through Person class

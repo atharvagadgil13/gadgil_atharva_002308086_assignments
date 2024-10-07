@@ -49,7 +49,7 @@ public class ListPersonJPanel extends javax.swing.JPanel {
         searchBox = new javax.swing.JTextField();
 
         lbTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbTitle.setText("List");
+        lbTitle.setText("List of People");
 
         tblPersons.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

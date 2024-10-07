@@ -469,13 +469,13 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
     return;
 }
         Person p = personDirectory.addPerson();
-p.setFirstName(firstName);
-p.setLastName(lastName);
-p.setAge(age);
-p.setDateOfBirth(dob);
-p.setSocialSecurityNumber(ssn);
-p.setHomeAddress(homeStreetAddress, homeUnitNumber, homeZipCode, ssn, homeState, homeUnitNumber);
-p.setOfficeAddress(homeStreetAddress, homeUnitNumber, homeZipCode, ssn, homeState, homeUnitNumber);
+person.setFirstName(firstName);
+person.setLastName(lastName);
+person.setAge(age);
+person.setDateOfBirth(dob);
+person.setSocialSecurityNumber(ssn);
+person.setHomeAddress(homeStreetAddress, homeUnitNumber, homeZipCode, ssn, homeState, homeUnitNumber);
+person.setOfficeAddress(homeStreetAddress, homeUnitNumber, homeZipCode, ssn, homeState, homeUnitNumber);
   JOptionPane.showMessageDialog(null, "Person Successfully Added", "Information", JOptionPane.INFORMATION_MESSAGE);
   
 txtFirstName.setText("");
@@ -564,7 +564,7 @@ txtAnnualIncome.setText("");
     private void refreshTextFields() {
     txtFirstName.setText(person.getFirstName());
     txtLastName.setText(person.getLastName());
-    txtDOB.setText(person.getDateOfBirth());
+    txtDOB.setText(person.getDob());
     txtSSN.setText(person.getSocialSecurityNumber());
     txtStreetAddress.setText(person.getHomeStreet());
     txtUnitNumber.setText(person.getHomeUnit());
@@ -578,12 +578,12 @@ txtAnnualIncome.setText("");
     txtCity1.setText(person.getOfficeCity());
     txtState1.setText(person.getOfficeState());
     txtContactNumber1.setText(person.getOfficeNumber());
-    txtAge.setText(String.valueOf((char) person.getAge())); // for int
+    txtAge.setText(String.valueOf( person.getAge())); // for int
     txtAnnualIncome.setText(String.valueOf(person.getAnnualIncome())); // for double or float
     txtBodyWeight.setText(String.valueOf(person.getBodyWeight()));    }
 
     private void setViewMode() {
-        txtFirstName.setEnabled(false);
+    txtFirstName.setEnabled(false);
     txtLastName.setEnabled(false);
     txtDOB.setEnabled(false);
     txtSSN.setEnabled(false);
