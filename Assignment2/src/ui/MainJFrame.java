@@ -4,9 +4,11 @@
  */
 package ui;
 
+import java.awt.CardLayout;
 import javax.swing.JFrame;
 import model.Person;
 import model.PersonDirectory;
+import ui.PersonManager.PersonMngWorkAreaJPanel;
 
 /**
  *
@@ -81,17 +83,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jSplitPane.setTopComponent(titlePanel);
 
-        javax.swing.GroupLayout workAreaLayout = new javax.swing.GroupLayout(workArea);
-        workArea.setLayout(workAreaLayout);
-        workAreaLayout.setHorizontalGroup(
-            workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 671, Short.MAX_VALUE)
-        );
-        workAreaLayout.setVerticalGroup(
-            workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 454, Short.MAX_VALUE)
-        );
-
+        workArea.setLayout(new java.awt.CardLayout());
         jSplitPane.setRightComponent(workArea);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -112,6 +104,11 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnGoToWorkAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGoToWorkAreaActionPerformed
         // TODO add your handling code here:
+        PersonMngWorkAreaJPanel panel = new PersonMngWorkAreaJPanel(workArea, personDirectory);
+        workArea.add("PersonMngWorkArea", panel);
+        CardLayout layout = (CardLayout) workArea.getLayout();
+        layout.next(workArea);
+        
         
     }//GEN-LAST:event_btnGoToWorkAreaActionPerformed
 
