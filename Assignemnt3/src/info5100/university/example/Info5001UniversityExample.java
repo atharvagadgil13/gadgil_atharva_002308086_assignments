@@ -179,6 +179,7 @@ private static void registerForCourse(CourseLoad courseLoad, CourseSchedule cour
         CourseLoad courseLoad = student.getCourseLoadBySemester("Fall2023");
         double totalCredits = 0.0;
         double totalGradePoints = 0.0;
+        double totalTution = 0.0;
         
         // Check if the student has a course load for the semester
         if (courseLoad != null) {
@@ -199,6 +200,7 @@ private static void registerForCourse(CourseLoad courseLoad, CourseSchedule cour
                     // Update total credits and grade points
                     totalCredits += courseOffer.getSubjectCourse().getCredits();
                     totalGradePoints += grade * courseOffer.getSubjectCourse().getCredits();
+                    totalTution += courseOffer.getSubjectCourse().getCoursePrice();
                 }
             }
             
@@ -206,8 +208,10 @@ private static void registerForCourse(CourseLoad courseLoad, CourseSchedule cour
             double gpa = totalCredits > 0 ? totalGradePoints / totalCredits : 0.0;
             System.out.println("Total Credits: " + totalCredits);
             System.out.println("GPA: " + String.format("%.2f", gpa));
+            System.out.println("Total Tution: " + totalTution);
         } else {
             System.out.println("No courses registered for this semester.");
+            
         }
     }
     System.out.println("-------------------------------------");
