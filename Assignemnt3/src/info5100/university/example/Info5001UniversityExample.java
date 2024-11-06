@@ -211,7 +211,6 @@ private static void registerForCourse(CourseLoad courseLoad, CourseSchedule cour
             System.out.println("Total Tution: " + totalTution);
         } else {
             System.out.println("No courses registered for this semester.");
-            
         }
     }
     System.out.println("-------------------------------------");
