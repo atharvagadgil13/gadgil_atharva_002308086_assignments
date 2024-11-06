@@ -57,5 +57,20 @@ public class FacultyProfile {
         }
         return false;
     }
+    
+    public void setFacultyAssignment(FacultyAssignment assignment) {
+    facultyassignments.add(assignment);
+    }
+    public FacultyAssignment getFacultyAssignment() {
+    if (facultyassignments.isEmpty()) {
+        return null; // Or handle it accordingly
+    }
+    return facultyassignments.get(0); // Return the first assignment or modify as needed
+}
+    
+    @Override
+public String toString() {
+    return "Faculty: " + person.getName(); // Assumes getName() returns the faculty's name
+}
 
 }

@@ -24,5 +24,8 @@ public class Person {
         if(getPersonId().equals(id)) return true;
         return false;
     }
+        public String getName(){
+            return id;
+        }
     
 }

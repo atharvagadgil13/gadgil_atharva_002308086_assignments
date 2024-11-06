@@ -107,4 +107,7 @@ public void addElectiveCourse(Course c){
         co.assignEmptySeat(cl);
 
     }
+    public FacultyDirectory getFacultyDirectory() {
+        return facultydirectory;
+    }
 }
