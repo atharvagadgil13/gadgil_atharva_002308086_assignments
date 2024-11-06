@@ -24,7 +24,7 @@ public class FacultyAssignment {
         
         return tracerating;
     }
-       public void seProfRating(double r){
+       public void setProfRating(double r){
            
            tracerating = r;
        }
