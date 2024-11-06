@@ -45,5 +45,15 @@ public class CourseLoad {
         public ArrayList<SeatAssignment> getSeatAssignments(){
             return seatassignments;
         }
+         public boolean isRegisteredForCourse(CourseOffer courseOffer) {
+        for (SeatAssignment sa : seatassignments) {
+            if (sa.getCourseOffer().equals(courseOffer)) {
+                return true; // Student is registered for this course
+            }
+        }
+        return false; // Student is not registered for this course
+}
+
+
             
 }
